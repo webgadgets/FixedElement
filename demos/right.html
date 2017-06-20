@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
+        <style>
+            *,
+            *:before,
+            *:after {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+
+            body {
+                font-family: arial;
+                padding: 0;
+                margin: 0;
+            }
+            ul {
+                margin: 0;padding: 0;
+            }
+            #fixed-element ul li, #fixed-element2 ul li {
+                display: inline-block;
+            }
+            #fixed-element a, #fixed-element2 a {
+                color: #333;
+            }
+            #fixed-element, #fixed-element2 {
+                background-color: #eee;
+            }
+            .footer {
+                background-color: #555;
+                color: #fff;
+                padding: 20px 0;
+                text-align: center;
+            }
+            .right-menu {
+                background-color: #eaeaea;
+            }
+            .right-menu li {
+                display: block;
+            }
+            .right-menu li a {
+                color: #333;
+            }
+        </style>
+        <script src="../dist/fixed-element.min.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(document).ready(function () {
+                $("#fixed-element").fixedElement({
+                    activateOn: 70,
+                    fixedHeight:60,
+                    normalHeight:40
+                });
+                $(".right-menu").fixedElement({
+                    placement: 'right',
+                    top: 34,
+                    activateOn: 70,
+                    bottom:57,
+                    getWidthOnElement:'.right-col',
+                });
+
+                $(".footer").fixedElement({
+                    placement: 'bottom'
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <div style="width:90%;margin: auto;">
+            <div>
+                <div id="fixed-element">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Top Fixed</a>
+                    </div>
+                    <div class="navbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home </a></li>
+                            <li><a href="#about">About 1</a></li>
+                            <li><a href="#contact">Contact1</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div style="float: left;width: 70%;">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie sem ut elementum pretium. Sed blandit mauris ante, non dignissim augue molestie non. Sed lacinia egestas est, sit amet iaculis erat mattis nec. Integer id laoreet ante, nec placerat risus. Aliquam vel luctus lectus. Vestibulum pulvinar eleifend tempor. Sed justo erat, scelerisque consequat venenatis in, ornare eget risus.</p>
+                <p>Suspendisse nec ipsum eros. Curabitur a commodo orci, sit amet tincidunt leo. Vestibulum eu ex nisi. Duis felis urna, iaculis ac ultricies eu, pellentesque quis turpis. Phasellus ultricies nibh ut neque luctus viverra. Aliquam porttitor viverra finibus. Duis a accumsan tortor. Pellentesque condimentum eros vitae sem malesuada interdum. Nulla ut sollicitudin enim. Nulla facilisi. Duis ut dolor quis augue eleifend pharetra eget vitae erat. Donec aliquam, elit id aliquet vestibulum, urna ligula malesuada est, dapibus placerat nulla massa non ex. Donec ut tincidunt ex. Praesent sit amet posuere libero, et dictum arcu. Pellentesque non faucibus turpis.</p>
+                <p>Nulla eu justo condimentum, sollicitudin dolor vel, faucibus velit. In est ante, auctor sit amet pellentesque sed, porttitor id libero. Pellentesque eget massa id elit luctus laoreet sed vel libero. Sed dignissim varius leo, sit amet imperdiet tellus ultrices sed. Ut blandit nibh id volutpat interdum. Proin diam neque, mollis sed lectus sit amet, placerat sodales orci. Vestibulum vehicula velit sit amet feugiat aliquet. Vestibulum diam urna, volutpat ac tristique vitae, blandit sed metus. Donec nulla sapien, sollicitudin posuere pharetra nec, vehicula vitae nisi. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie sem ut elementum pretium. Sed blandit mauris ante, non dignissim augue molestie non. Sed lacinia egestas est, sit amet iaculis erat mattis nec. Integer id laoreet ante, nec placerat risus. Aliquam vel luctus lectus. Vestibulum pulvinar eleifend tempor. Sed justo erat, scelerisque consequat venenatis in, ornare eget risus.</p>
+                <p>Suspendisse nec ipsum eros. Curabitur a commodo orci, sit amet tincidunt leo. Vestibulum eu ex nisi. Duis felis urna, iaculis ac ultricies eu, pellentesque quis turpis. Phasellus ultricies nibh ut neque luctus viverra. Aliquam porttitor viverra finibus. Duis a accumsan tortor. Pellentesque condimentum eros vitae sem malesuada interdum. Nulla ut sollicitudin enim. Nulla facilisi. Duis ut dolor quis augue eleifend pharetra eget vitae erat. Donec aliquam, elit id aliquet vestibulum, urna ligula malesuada est, dapibus placerat nulla massa non ex. Donec ut tincidunt ex. Praesent sit amet posuere libero, et dictum arcu. Pellentesque non faucibus turpis.</p>
+                <p>Nulla eu justo condimentum, sollicitudin dolor vel, faucibus velit. In est ante, auctor sit amet pellentesque sed, porttitor id libero. Pellentesque eget massa id elit luctus laoreet sed vel libero. Sed dignissim varius leo, sit amet imperdiet tellus ultrices sed. Ut blandit nibh id volutpat interdum. Proin diam neque, mollis sed lectus sit amet, placerat sodales orci. Vestibulum vehicula velit sit amet feugiat aliquet. Vestibulum diam urna, volutpat ac tristique vitae, blandit sed metus. Donec nulla sapien, sollicitudin posuere pharetra nec, vehicula vitae nisi. </p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean molestie sem ut elementum pretium. Sed blandit mauris ante, non dignissim augue molestie non. Sed lacinia egestas est, sit amet iaculis erat mattis nec. Integer id laoreet ante, nec placerat risus. Aliquam vel luctus lectus. Vestibulum pulvinar eleifend tempor. Sed justo erat, scelerisque consequat venenatis in, ornare eget risus.</p>
+                <p>Suspendisse nec ipsum eros. Curabitur a commodo orci, sit amet tincidunt leo. Vestibulum eu ex nisi. Duis felis urna, iaculis ac ultricies eu, pellentesque quis turpis. Phasellus ultricies nibh ut neque luctus viverra. Aliquam porttitor viverra finibus. Duis a accumsan tortor. Pellentesque condimentum eros vitae sem malesuada interdum. Nulla ut sollicitudin enim. Nulla facilisi. Duis ut dolor quis augue eleifend pharetra eget vitae erat. Donec aliquam, elit id aliquet vestibulum, urna ligula malesuada est, dapibus placerat nulla massa non ex. Donec ut tincidunt ex. Praesent sit amet posuere libero, et dictum arcu. Pellentesque non faucibus turpis.</p>
+                <p>Nulla eu justo condimentum, sollicitudin dolor vel, faucibus velit. In est ante, auctor sit amet pellentesque sed, porttitor id libero. Pellentesque eget massa id elit luctus laoreet sed vel libero. Sed dignissim varius leo, sit amet imperdiet tellus ultrices sed. Ut blandit nibh id volutpat interdum. Proin diam neque, mollis sed lectus sit amet, placerat sodales orci. Vestibulum vehicula velit sit amet feugiat aliquet. Vestibulum diam urna, volutpat ac tristique vitae, blandit sed metus. Donec nulla sapien, sollicitudin posuere pharetra nec, vehicula vitae nisi. </p>
+            </div>
+            <div style="float: right;width: 30%;" class="right-col">
+                <div id="fixed-element4" class="right-menu">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">Project name</a>
+                    </div>
+                    <div class="navbar">
+                        <ul class="nav navbar-nav">
+                            <li class="active"><a href="#">Home</a></li>
+                            <li><a href="#about">About</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div style="clear: both;"></div>
+
+
+
+
+
+            <div class="footer">Fixed Footer</div>
+        </div>
+    </body>
+</html>
